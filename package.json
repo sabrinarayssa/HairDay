@@ -1,11 +1,15 @@
 {
+  "homepage": "https://sabrinarayssa.github.io/HairDay",
   "name": "hairday",
   "description": "Aplicação Web de agendamento para corte de cabelo.",
   "author": "Sabrina Rayssa Teixeira",
   "scripts": {
     "build": "webpack",
     "dev": "webpack server",
-    "server": "json-server --watch server.json --port 3333"
+    "server": "json-server --watch server.json --port 3333",
+    "predeploy": "npm run build",
+   "deploy": "gh-pages -d build"
+    
   },
   "dependencies": {
     "@babel/core": "^7.23.7",
@@ -17,6 +21,7 @@
   "devDependencies": {
     "copy-webpack-plugin": "^11.0.0",
     "css-loader": "^6.8.1",
+    "gh-pages": "^6.3.0",
     "html-webpack-plugin": "^5.6.0",
     "style-loader": "^3.3.3",
     "webpack": "^5.89.0",
@@ -24,4 +29,3 @@
     "webpack-dev-server": "^4.15.1"
   }
 }
-
